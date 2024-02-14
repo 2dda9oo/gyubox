@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공지사항</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+</head>
+<body>
+    <div class="board_wrap">
+        <div class="board_title">
+            <strong>공지사항</strong>
+            <p>공지사항을 빠르고 정확하게 안내해드립니다.</p>
+        </div>
+        <div class="board_list_wrap">
+            <div class="board_list">
+                <div class="top">
+                    <div class="num">번호</div>
+                    <div class="title">제목</div>
+                    <div class="writer">글쓴이</div>
+                    <div class="date">작성시간</div>
+                </div>
+                  <% for(var i = posts.length - 1; i >= 0; i--) { %>
+                    <div class="item">
+                      <div class="num"><%= i + 1 %></div>
+                      <div class="title">
+                        <a href="/view/<%= posts[i].wid %>"><%= posts[i].title %></a> <!-- 게시물의 wid를 링크 주소에 추가 -->
+                      </div>
+                      <div class="writer"><%= posts[i].writer %></div>
+                      <div class="date"><%= posts[i].upload_date %></div>
+                    </div>
+                  <% } %>                  
+            </div>            
+            <div class="board_page">
+                <a href="#" class="bt first"><<</a>
+                <a href="#" class="bt prev"><</a>
+                <a href="#" class="bt next">></a>
+                <a href="#" class="bt last">>></a>
+            </div>
+            <div class="bt_wrap">
+                <a href="write" class="on">등록</a>
+            </div>              
+        </div>
+    </div>
+    
+</body>
+</html>

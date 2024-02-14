@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>웹페이지 제작 연습</title>
+        <link rel="stylesheet" href="index.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <header>
+                <h1 class="logo">보디빌딩의 세계</h1>
+                <nav>
+                    <ul>
+                        <li><a href="#intro">보디빌딩</a></li>
+                        <li><a href="#team">선수</a></li>
+                        <li><a href="#photo">사진</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <div id="slider">
+                <ul class="slides">
+                    <li class="slide"><img src="img/image1.jpg" alt=""></li>
+                    <li class="slide"><img src="img/image2.jpg" alt=""></li>
+                    <li class="slide"><img src="img/image3.jpg" alt=""></li>
+                </ul>
+            </div>
+
+            <section id="intro">
+                <div class="title">
+                    <h2>보디빌딩</h2>
+                    <p> 트레이닝과 식단 조절을 통해 균형있는 미적 근육을 가꾸고 이를 평가하는 공연예술성 성격을 가진 스포츠</p>
+                </div>
+
+                <div class="tabs">
+                    <ul class="tabs-list">
+                        <li class="active"><a href="#tab1">소개</a></li>
+                        <li><a href="#tab2">승패</a></li>
+                    </ul>
+
+                    <div id="tab1" class="tab active">
+                        <h3>소개</h3>
+                        <p>올림피아를 향한 여정</p>
+                    </div>
+                    
+                    <div id="tab2" class="tab">
+                        <h3>승패</h3>
+                        <p>형편없는 컨디셔닝 상태와 근육 강도를 일궈왔을 때, 
+                            나보다 상대방의 몸이 훨씬 좋아보일 때
+                        </p>
+                    </div>
+                </div>
+
+            </section>
+
+            <div class="clearfix"></div>
+
+            <section id="team">
+                <div class="title">
+                    <h2>선수</h2>
+                    <p>쇼미더바디 주요 출전 선수</p>
+                </div>
+
+                <div class="row">
+                    <div class="team-intro">
+                        <img src="img/team1.JPG">
+                        <h3>말왕</h3>
+                        <p>한쪽 승모가 없는 좌우 불균형을 딛고 클래식 피지크의 강자로 발돋움 하였다</p>
+                    </div>
+
+                    <div class="team-intro">
+                        <img src="img/team2.JPG">
+                        <h3>이준명</h3>
+                        <p>맨몸운동계의 최강자. 이를 바탕으로 한 등의 발달도가 인상적</p>
+                    </div>
+
+                    <div class="team-intro">
+                        <img src="img/team3.JPG">
+                        <h3>아모띠</h3>
+                        <p>설명이 필요없는 크로스피터로 보디빌딩계까지 접수해버리는 재능을 가졌다</p>
+                    </div>
+                </div>
+
+            </section>
+
+            <section id="photo">
+                <div class="title">
+                    <h2>사진</h2>
+                    <p>몬스터짐 주최 쇼미더바디 무대와 관련없는 사진</p>
+                </div>
+
+                <div class="slider">
+                    <div class="slide active"></div>
+                    <div class="slide"></div>
+                    <div class="slide"></div>
+                </div>
+
+                <p class="left-arrow"></p>
+                <p class="right-arrow"></p>
+
+            </section>
+
+            <footer id="footer">
+                <div clss="copyright">
+                    <p>Copyright © 2016-2018 elice. All rights reserved.</p>
+                </div>
+
+                <div class="address">
+                    <p>경기도 고양시 일산 킨텍스</p>
+                </div>
+
+            </footer>
+
+        </div>
+
+        <script src="index.js"></script>
+
+    </body>
+</html>
