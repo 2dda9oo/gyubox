@@ -1,0 +1,746 @@
+
+/*------------------------------검색창 영역------------------------------------*/
+.search-space {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #ffffff;
+}
+
+.partition {
+
+}
+
+/* Full search bar space styles */
+.full-searchbar-space {
+    width: 800px;
+    height: 60px;
+    border-radius: 50px / 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-items: flex-start;
+    border: 1px solid #e0e0e0;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    position: relative;
+
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+}
+
+.travel-spot,
+.check-inorout,
+.guest-select {
+    flex: 1;
+
+}
+
+/* Travel spot styles */
+.travel-spot {
+    display: flex;
+    align-items: center;
+    min-width: 0;
+    flex-direction: column;
+}
+
+.travel-spot-circle {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    border-radius: 50px / 50px;
+}
+.travel-spot-circle:hover {
+    background-color: #E6E6E6;
+    .travel-spot-text-space {
+        border: none;
+    }
+}
+
+.travel-spot-search {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 20px;
+    width: 100%;
+}
+
+.travel-spot-text-space {
+    width: 100%;
+    border-right: 1px solid;
+    border-right-color: #E6E6E6;
+}
+
+.travel-spot-naming {
+    font-size: 12px;
+    color: #555555;
+}
+
+.travel-spot-name-input {
+    font-size: 16px;
+    /* Add other input styles as needed */
+}
+
+/* Check-in, Check-out styles */
+.check-inorout {
+    align-items: center;
+}
+.position-detail{
+    display: flex;
+    position: relative;
+}
+
+.check-in-area,
+.check-out-area {
+    flex: 1;
+}
+
+.check-in-and-date,
+.check-out-and-date {
+    width: 100%;
+    border-right: 1px solid;
+    border-right-color: #E6E6E6;
+}
+
+.check-in-square,
+.check-out-square {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    border-radius: 50px / 50px;
+    cursor: pointer;
+}
+
+.check-in-square:hover {
+    background-color: #E6E6E6;
+    cursor: pointer;
+    .check-in-and-date{
+        border: none;
+    }
+}
+.check-out-square:hover {
+    background-color: #E6E6E6;
+    cursor: pointer;
+    .check-out-and-date{
+        border: none;
+    }
+}
+
+.check-in-naming,
+.check-out-naming {
+    margin-left: 20px;
+    font-size: 12px;
+    color: #555555;
+}
+
+.in-date-add,
+.out-date-add {
+    margin-left: 20px;
+    font-size: 14px;
+    color: #888888;
+    margin-top:3px;
+}
+
+/* Guest select styles */
+.guest-select {
+    display: flex;
+    align-items: center;
+}
+
+.guest-select-and-search {
+    flex: 1;
+}
+
+.guest-select-circle {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    border-radius: 50px / 50px;
+    cursor: pointer;
+}
+
+.guest-select-circle:hover {
+    background-color: #E6E6E6;
+}
+
+.guest-naming {
+    margin-left: 20px;
+    font-size: 12px;
+    color: #555555;
+}
+
+.guest-add {
+    margin-left: 20px;
+    font-size: 14px;
+    color: #888888;
+    margin-top:3px;
+}
+
+.search-guest-button {
+    background-color: #ff5a5f;
+    color: #ffffff;
+    padding: 14px 16px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 50%;
+    margin-right: 5px;
+    /* Add other button styles as needed */
+}
+
+.local-search-area {
+    position: absolute;
+    top: calc(100% + 10px); /* 검색창 바로 아래에 위치하도록 설정, 10px는 여유 공간 */
+    left: 0;
+    width: 500px;
+    height: 540px;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 50px / 50px;
+    display: none;
+    padding: 15px;
+    z-index: 1002;
+}
+
+
+.local-search-background {
+    height: 480px;
+    margin-top: 20px;
+    overflow-y: scroll;
+
+}
+
+.name-search {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-bottom: 40px;
+}
+
+.map-space {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+}
+
+.map-search {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.full-search-area,
+.europe-search-area,
+.japan-search-area,
+.eastaisa-search-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+/* 각 요소들을 수평으로 배치하기 위한 스타일 */
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.full-map,
+.europe-map,
+.japan-map,
+.eastasia-map {
+  width: 94.6px;
+  height: 94.6px;
+  margin-bottom: 10px;
+  /* Add background images for map buttons */
+}
+
+.world,
+.europe,
+.japan,
+.eastasia{
+    border: 1px solid #dddddd;
+    border-radius: 10px / 10px;
+}
+
+.world:hover,
+.europe:hover,
+.japan:hover,
+.eastasia:hover{
+    border: 1px solid #000000;
+    border-radius: 10px / 10px;
+}
+
+.local-name-space {
+  margin-top: 30px;
+  padding: 15px;
+}
+
+.naming-korea {
+  font-size: 16px;
+  font-weight: bold;
+  margin-left: 10px;
+  margin-bottom: 40px;
+}
+
+.city-button-area {
+    align-items: center;
+}
+
+.korea-city {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(4, 1fr); /* 4열 */
+    grid-template-rows: repeat(3, minmax(0, 1fr)); /* 2행 */
+    grid-column-gap: 10px; /* 열 간의 간격 설정 */
+    grid-row-gap: 30px; /* 행 간의 간격 설정 */
+}
+
+.seoul-area,
+ .busan-area,
+ .sokcho-area,
+ .gangreung-area,
+ .jeonju-area,
+ .daegu-area,
+ .gyeongju-area,
+ .yeosu-area,
+ .seogui-area,
+ .daejeon-area,
+ .jeju-area,
+ .incheon-area {
+    width: 100%; /* 버튼의 가로 크기를 부모의 1fr에 맞춤 */
+    height: 180%; /* 버튼의 세로 크기를 부모의 1fr에 맞춤 */
+    background-color: #ffffff;
+
+    /* 추가적인 스타일을 필요에 따라 여기에 추가 */
+}
+
+.seoul-button,
+ .busan-button,
+ .sokcho-button,
+ .gangreung-button,
+ .jeonju-button,
+ .daegu-button,
+ .gyeongju-button,
+ .yeosu-button,
+ .seogui-button,
+ .daejeon-button,
+ .jeju-button,
+ .incheon-button{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    border: 1px solid #dddddd;
+    border-radius: 50px / 50px;
+    justify-content: center;
+ }
+
+ .seoul-button:hover,
+  .busan-button:hover,
+  .sokcho-button:hover,
+  .gangreung-button:hover,
+  .jeonju-button:hover,
+  .daegu-button:hover,
+  .gyeongju-button:hover,
+  .yeosu-button:hover,
+  .seogui-button:hover,
+  .daejeon-button:hover,
+  .jeju-button:hover,
+  .incheon-button:hover{
+     width: 100%;
+     height: 100%;
+     display: flex;
+     align-items: center;
+     border: 1px solid #000000;
+     border-radius: 50px / 50px;
+     justify-content: center;
+  }
+
+ .local-world-area {
+    margin-top: 50px;
+ }
+
+.land-name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.land-name button {
+    font-size: 14px;
+    font-family: 'Circular', sans-serif;
+    color: #717171;
+    padding: 10px;
+    padding-bottom: 15px;
+
+}
+
+/* 선택된(활성화된) 버튼의 스타일을 지정*/
+.land-name button[aria-selected="true"] {
+    color: #222222;
+    font-weight: bold;
+}
+
+ .land-tap-list {
+    width: 420px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(8, 1fr); /* 8열 */
+    grid-template-rows: repeat(1, minmax(0, 1fr)); /* 1행 */
+    grid-column-gap: 10px;
+    overflow-x: hidden;
+    white-space: nowrap;
+    border-bottom: 1px solid #dddddd;
+ }
+
+ .local-place-name{
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(4, 1fr); /* 4열 */
+    grid-template-rows: repeat(3, minmax(0, 1fr)); /* 3행 */
+    grid-column-gap: 10px; /* 열 간의 간격 설정 */
+    grid-row-gap: 15px;
+    margin-bottom: 30px;
+ }
+
+.local-place-name button{
+    width: 100%; /* 버튼의 가로 크기를 부모의 1fr에 맞춤 */
+    height: 34.4px; /* 버튼의 세로 크기를 부모의 1fr에 맞춤 */
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 50px / 50px;
+}
+
+.local-place-name button:hover{
+    width: 100%; /* 버튼의 가로 크기를 부모의 1fr에 맞춤 */
+    height: 34.4px; /* 버튼의 세로 크기를 부모의 1fr에 맞춤 */
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 50px / 50px;
+}
+
+ .calendar-view-space {
+    position: absolute;
+    top: calc(100% + 10px); /* 검색창 바로 아래에 위치하도록 설정, 10px는 여유 공간 */
+    left: 0;
+    width: 800px;
+    height: 540px;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 50px / 50px;
+    display: none;
+    padding: 16px;
+    z-index: 1001;
+ }
+
+.position-detail {
+    position: relative;
+}
+
+.invisible-screen {
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 96%;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 50px / 50px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    display: none;
+}
+
+.invisible-text {
+    font-size: 12px;
+    padding-left: 5px;
+    font-family: "Circular";
+    color: #555555;
+    font-weight: bold;
+}
+
+.invisible-duration {
+    margin-top: 3px;
+    padding-left: 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+ .detail-partition {
+     display: flex;
+     flex-direction: column;
+ }
+
+ .schedule-select-area {
+
+ }
+
+ #tabs {
+    align-items: center;
+ }
+
+ .tab-select-area {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+ }
+
+ .tab-title {
+    display: flex;
+    align-items: center;
+    background-color: #E6E6E6;
+    border: 1px solid #dddddd;
+    border-radius: 50px / 50px;
+    justify-content: center;
+    padding: 3px;
+ }
+
+ .select-title-tab {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 10px;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .date-select {
+    background-color: #FFFFFF;
+    border: 1px solid #dddddd;
+    border-radius: 50px / 50px;
+    padding: 10px;
+  }
+
+  .month-part,
+  .flexible-schedule {
+    background-color: #E6E6E6;
+    border-radius: 50px / 50px;
+    padding: 10px;
+  }
+
+  .tab_contents {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .tab1 {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      display: block;
+  }
+
+  .tab2 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    display: none;
+  }
+
+  .tab3 {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      display: none;
+    }
+
+  .add-date-button-area{
+    width: 100%;
+    display: block;
+  }
+
+  .calendar-area {
+    margin-top: 20px;
+    align-items: center;
+  }
+
+.button-control{
+    margin-left: 30px;
+}
+.current-date,
+.plus-one,
+.plus-two,
+.plus-three,
+.plus-week {
+  border: 1px solid #dddddd;
+  border-radius: 50px / 50px;
+  padding: 8px;
+  padding-right: 15px;
+  padding-left: 15px;
+  justify-content: center;
+}
+
+.duration-section {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.when-is-travel {
+    font-size: 18px;
+    font-family: 'Circular';
+    font-weight: bold;
+}
+
+.duration-image {
+    margin-top: 20px;
+}
+
+.schedule-setting-space {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.select-how-long {
+    font-size: 18px;
+    font-family: 'Circular';
+    margin-top: 45px;
+}
+
+.duration-button-area{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.durationBtn {
+    align-items: center;
+    padding: 30px;
+
+}
+
+.weekend,
+.one-week,
+.one-month {
+    border: 1px solid #dddddd;
+    border-radius: 50px / 50px;
+    padding: 8px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.select-when-travel {
+    font-size: 18px;
+    font-family: 'Circular';
+    margin-top: 25px;
+}
+
+.month-collection {
+    width: 766px;
+    margin-top: 20px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(12, 1fr); /* 12열 */
+    grid-template-rows: repeat(1, minmax(0, 1fr)); /* 1행 */
+    grid-column-gap: 10px; /* 열 간의 간격 설정 */
+
+
+    overflow-x: hidden;
+    white-space: nowrap;
+}
+
+.month1, .month2, .month3, .month4, .month5, .month6,
+.month7, .month8, .month9, .month10, .month11, .month12 {
+    border: 1px solid #dddddd;
+    border-radius: 10px / 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.guest-control-space {
+    position: absolute;
+    top: calc(100% + 10px); /* 검색창 바로 아래에 위치하도록 설정, 10px는 여유 공간 */
+    right: 0;
+    width: 360px;
+    height: 360px;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 50px / 50px;
+    display: none;
+    padding: 16px;
+    z-index: 1000;
+ }
+
+ .guest-setting {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+ }
+
+ .adult-area,
+ .child-area,
+ .baby-area{
+    display: flex;
+    width: 100%;
+    height: 80px;
+    align-items: center;
+    border-bottom: 1px solid #dddddd;
+    justify-content: space-between;
+ }
+
+ .pet-area {
+    display: flex;
+    width: 100%;
+    height: 80px;
+    align-items: center;
+    justify-content: space-between;
+ }
+
+ .control-bar {
+     width: 104px;
+     height: 32px;
+     display: flex;
+     align-items: center;
+     flex-direction: row;
+     justify-content: space-between;
+ }
+
+.minus-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.plus-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* Adjustments for responsiveness as needed */
+@media (max-width: 768px) {
+    /* Add responsive styles as needed */
+}
+/*---------------------------------------검색창 영역 끝---------------------------------------------------*/
