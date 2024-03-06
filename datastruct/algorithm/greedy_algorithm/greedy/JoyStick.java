@@ -1,4 +1,5 @@
 
+import java.util.*;
 
 public class JoyStick {
 
@@ -73,6 +74,8 @@ public class JoyStick {
     }
 
     public static void main(String[] args) {
-
+        JoyStick joyStick = new JoyStick();
+        int result = joyStick.solution("JEROEN");
+        System.out.println(result);
     }
 }
